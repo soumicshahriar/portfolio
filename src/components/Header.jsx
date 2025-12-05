@@ -12,7 +12,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const sections = [
-  { name: "Home", icon: FiHome, id: "home" },
+  // { name: "Home", icon: FiHome, id: "home" },
   { name: "Hero", icon: FiUser, id: "hero" },
   { name: "Tech", icon: FiCode, id: "tech" },
   { name: "Projects", icon: FiFolder, id: "projects" },
@@ -65,8 +65,7 @@ const Header = () => {
   return (
     <header
       ref={headerRef}
-      id="home"
-      className="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-[#0e0717] to-[#1a0f2e] backdrop-blur-sm border-b border-purple-500/20 shadow-2xl shadow-purple-900/30"
+      className="fixed top-0 left-0 w-full z-50 bg-linear-to-b from-[#0e0717] to-[#1a0f2e] backdrop-blur-sm border-b border-purple-500/20 shadow-2xl shadow-purple-900/30"
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-5 md:px-10">
         {/* Logo */}

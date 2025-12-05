@@ -7,7 +7,7 @@ import TechSection from "./components/TechSection";
 
 function App() {
   return (
-    <div className="bg-[#030105]" id="home">
+    <div className="bg-[#030105]">
       <Header />
 
       <section id="hero">
