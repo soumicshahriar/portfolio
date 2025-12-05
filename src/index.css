@@ -1,0 +1,119 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Prevent right-side overflow everywhere */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* Glass + subtle glow */
+.glass-custom {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: box-shadow 0.25s ease;
+}
+
+.experience-card:hover {
+  box-shadow: 0 0 15px rgba(105, 51, 222, 0.25);
+}
+
+/* Glass floating tech icons */
+.icon-circle {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: clamp(36px, 4vw, 60px);
+  height: clamp(36px, 4vw, 60px);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.25s ease;
+}
+
+.icon-circle:hover {
+  background: rgba(124, 58, 237, 0.25);
+  box-shadow: 0 0 12px rgba(124, 58, 237, 0.5);
+}
+
+/* Glow Orb – FIXED (removed duplicate) */
+.glow-orb {
+  width: clamp(100px, 18vw, 180px);
+  height: clamp(100px, 18vw, 180px);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(155, 89, 255, 0.45),
+    rgba(108, 0, 255, 0.2),
+    transparent
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  animation: orb-pulse 4s ease-in-out infinite;
+}
+
+@keyframes orb-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 40px rgba(150, 70, 255, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(180, 100, 255, 0.75);
+  }
+}
+
+/* Orbit Rings – FIXED sizes */
+.orbit-ring {
+  position: absolute;
+  border-radius: 30%;
+  border: 1px solid rgba(180, 100, 255, 0.25);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100vw;
+  max-height: 100vw;
+  overflow: hidden;
+}
+
+.orbit-1 {
+  width: clamp(150px, 35vw, 260px);
+  height: clamp(150px, 35vw, 260px);
+  animation: pulse 5s linear infinite;
+}
+
+.orbit-2 {
+  width: clamp(220px, 50vw, 340px);
+  height: clamp(220px, 50vw, 340px);
+  animation: pulse 10s linear infinite reverse;
+}
+
+.orbit-3 {
+  width: clamp(260px, 70vw, 400px); /* FIXED */
+  height: clamp(260px, 70vw, 400px); /* FIXED */
+  animation: spin3 34s linear infinite;
+}
+
+/* Project cards */
+.project-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(14px);
+}
+
+.glass-box {
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 0 30px rgba(100, 60, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.tooltip-glass {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(140, 90, 250, 0.4);
+}
