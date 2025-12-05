@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FiExternalLink, FiCode } from "react-icons/fi";
+import { FiExternalLink, FiCode, FiDownload } from "react-icons/fi";
 import { MdOutlineSchool } from "react-icons/md";
 import { motion } from "framer-motion";
 import gsap from "gsap";
@@ -254,6 +254,20 @@ const Hero = () => {
                   </span>
                 </a>
               </div>
+
+              {/* Resume Download Button */}
+              <a
+                href="/resume.pdf"
+                download="Soumic_Shahriar_Resume.pdf"
+                className="group/resume relative p-3 rounded-full bg-linear-to-br from-green-500/20 to-emerald-500/20 border border-white/10 hover:border-green-400/50 hover:bg-green-500/30 transition-all duration-300 hover:scale-110"
+                aria-label="Download Resume"
+                title="Download Resume"
+              >
+                <FiDownload className="text-white text-lg group-hover/resume:text-green-400 transition-colors" />
+                <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 text-xs text-white bg-gray-800 rounded-lg opacity-0 group-hover/resume:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                  Download Resume
+                </span>
+              </a>
 
               {/* CTA Button */}
               <motion.a
